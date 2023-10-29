@@ -1,6 +1,6 @@
 body {
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-    background-color: #545454;
+    background-color: #3B3B3B;
 }
 
 h1 {
@@ -9,16 +9,25 @@ h1 {
     color: #8e8e8e;
 }
 
+
+h3 {
+    color: #EEEEEE;
+}
+
 li {
     display: inline;
 }
 
 a {
-    color: #8e8e8e;
+    color: #D9D9D9;
+}
+
+p {
+    color: #ffffff;
 }
 
 li a:hover:not(.active) {
-    background-color: #111;
+    background-color: #333333;
 }
 
 .active {
@@ -30,14 +39,13 @@ li a:hover:not(.active) {
 }
 
 .topnav {
-    background-color: #EEEEEE;
+    background-color: #000000;
     overflow: hidden;
     text-align: center;
 }
 
 /* Style the links inside the navigation bar */
 .topnav a {
-    color: #8e8e8e;
     text-align: center;
     margin: auto;
     padding: 100px;
@@ -60,9 +68,70 @@ li a:hover:not(.active) {
     height: 300px;
 }
 
+.productsbanner {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    width: 90%;
+    height: 300px;
+}
+
+
 .contactList {
     float: left;
-    width: 50%;
+    width: 20%;
     margin-top: 6px;
     padding: 20px;
+}
+
+.bodylink {
+    color: #bcccd3;
+}
+
+
+.map {
+    float: right;
+}
+
+.mapimage {
+    width: 70%;
+}
+
+.productimage {
+    width: 50%;
+    height: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+}
+
+.container {
+    display: flex;
+
+}
+.container > div {
+    flex: 1;
+    background-color: #000;
+    margin-left: 5px;
+    margin-right: 5px;
+    height: auto;
+    width: 60%;
+}
+
+.container > div > h4 {
+    color: #EEEEEE;
+    text-align: center;
+}
+
+.container > div > h5 {
+    color: #EEEEEE;
+    text-align: left;
+    margin-left: 20px;
+}
+
+
+.container > div > p {
+    text-align: center;
 }
