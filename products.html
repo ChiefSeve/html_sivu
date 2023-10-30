@@ -1,12 +1,31 @@
 <!DOCTYPE html>
 <html lang="fi">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel='stylesheet' href='style.css'>
   <title>Products</title>
+  <script>
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown menu if the user clicks outside of it
+    window.onclick = function(event) {
+      if (!event.target.matches('.dropbtn')) {
+        let dropdowns = document.getElementsByClassName("dropdown-content");
+        let i;
+        for (i = 0; i < dropdowns.length; i++) {
+          let openDropdown = dropdowns[i];
+          if (openDropdown.classList.contains('show')) {
+            openDropdown.classList.remove('show');
+          }
+        }
+      }
+    }
+  </script>
 </head>
 <body>
-  <div class="topnav">
+  <div class="topnav mobile-display-none">
     <img class="logo" src="img/image.png" alt="company logo">
     <div class="topnav-right">
       <ul>
@@ -14,6 +33,14 @@
         <li><a class="active">Products</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
+    </div>
+  </div>
+  <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">Navigation</button>
+    <div id="myDropdown" class="dropdown-content">
+      <a href="home.html">home</a>
+      <a class="active">products</a>
+      <a href="contact.html">contact</a>
     </div>
   </div>
   <img class="productsbanner" src="img/generic.png" alt="banner for prodcuts">

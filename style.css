@@ -1,5 +1,11 @@
+@font-face {
+    font-family: Montserrat;
+    src: url('Montserrat-Regular.ttf');
+}
+
+
 body {
-    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    font: 14px Montserrat !important;
     background-color: #3B3B3B;
 }
 
@@ -64,7 +70,7 @@ li a:hover:not(.active) {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 10px;
-    width: 590px;
+    width: fit-content;
     height: 300px;
 }
 
@@ -92,7 +98,6 @@ li a:hover:not(.active) {
 
 
 .map {
-    float: right;
 }
 
 .mapimage {
@@ -116,7 +121,7 @@ li a:hover:not(.active) {
     background-color: #000;
     margin-left: 5px;
     margin-right: 5px;
-    height: auto;
+    height: fit-content;
     width: 60%;
 }
 
@@ -134,4 +139,73 @@ li a:hover:not(.active) {
 
 .container > div > p {
     text-align: center;
+}
+
+.dropdown{
+    display: none;
+}
+
+.mobile-link {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .mobile-link{
+        display: flex;
+    }
+
+    .dropbtn {
+        background-color: #000000;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+    }
+
+    .dropbtn:hover, .dropbtn:focus {
+        background-color: #000000;
+    }
+
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #7a7a7a;
+        min-width: 160px;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        color: #e8e8e8;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown a:hover {background-color: #5d5d5d;}
+
+    .show {display: block;}
+
+
+    .content-wrapper{
+        min-width: 100%;
+
+    }
+    .header-wrapper{
+        justify-content: center;
+    }
+    .mobile-display-none{
+        display: none;
+    }
+    .mobile-display{
+        display: block;
+    }
 }
